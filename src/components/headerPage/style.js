@@ -1,15 +1,16 @@
+
 import styled from "styled-components";
 import "../../styles/globalStyles";
 
 export const Header = styled.header `
 display: flex;
-justify-content: space-around;
+justify-content: space-between;
 flex-direction: column;
 width: 100%;
 height: 100px;
 background-color: var(--grey-0);
 align-items: center;
-padding: 10px 5px;
+padding: 0 0 10px 0;
 
 
 
@@ -42,13 +43,14 @@ input{
     height: 40px;
     max-width: 380px;
     padding: 0px 95px 0px 5px;
+    margin-left: 4rem
 }
 
 button{
-width: 23%;
+width: 200px;
 height: 25px;
-position: absolute;
-right: 30px;
+position: relative;
+right: 25%;
 border: 2px solid var(--color-primary);
 color:#fff ;
 background-color: var(--color-primary);
@@ -58,5 +60,10 @@ border-radius: 8px;
 
 @media (min-width: 768px){
 flex-direction: row;
+
+h1{
+    margin-left: 10rem;
+}
+
 }
 `

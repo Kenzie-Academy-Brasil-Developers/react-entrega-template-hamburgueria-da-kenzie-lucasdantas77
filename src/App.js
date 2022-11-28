@@ -1,24 +1,20 @@
 import { useState } from 'react';
-import { Home } from './homePage';
+import {Home} from './components/homePage/index';
 import GlobalStyles from './styles/globalStyles';
-
-
 
 function App() {
   
-
 const [filteredProducts, setFilteredProducts] = useState([]);
 const [currentSale, setCurrentSale] = useState([])
 const [cartTotal, setCartTotal] = useState(0)
 
-
   return (
     <div className="App">
-    
-    <GlobalStyles/>
-        <Home/>
+      <GlobalStyles/>
+      <Home/>
     </div>
   );
 }
 
 export default App;
+

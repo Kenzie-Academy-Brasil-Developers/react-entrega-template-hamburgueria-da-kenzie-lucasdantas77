@@ -7,9 +7,16 @@ export const CardUl = styled.ul `
  list-style: none;
  align-items: center;
  gap: 2rem;
- margin-top: 2rem
-
-
+ margin-top: 2rem;
+ width: 100%;
+ max-width: 1200px;
+ 
+ @media (min-width: 768px){
+      overflow: hidden;
+      flex-wrap: wrap;
+     justify-content:space-around
+    
+    }
 `
 
 export const CardLi = styled.li `
@@ -21,11 +28,16 @@ background-color: #fff;
 box-sizing: border-box;
 border: 2px solid var(--grey-20);
 border-radius: 5px;
-width: 80%;
-height: 70%;
+width: 90%;
+max-width:300px;
+
 padding: 10px;
 gap: 0.5rem;
 margin-bottom: 1rem;
+
+@media (min-width:768px){
+    heigth: 10px
+}
 
 h3{
     font-weight: 700;
@@ -53,6 +65,8 @@ button{
     padding: 5px
 }
 
+
+
 `
 
 export const Image = styled.img `
@@ -60,4 +74,9 @@ width: 170px;
 height: 150px;
 background-color: var(--grey-0);
 
+@media (min-width: 768px){
+    width: 270px;
+    height: 180px
+    
+}
 `
