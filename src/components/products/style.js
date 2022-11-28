@@ -29,8 +29,7 @@ box-sizing: border-box;
 border: 2px solid var(--grey-20);
 border-radius: 5px;
 width: 90%;
-max-width:300px;
-
+max-width:270px;
 padding: 10px;
 gap: 0.5rem;
 margin-bottom: 1rem;
@@ -75,7 +74,7 @@ height: 150px;
 background-color: var(--grey-0);
 
 @media (min-width: 768px){
-    width: 270px;
+    width: 240px;
     height: 180px
     
 }

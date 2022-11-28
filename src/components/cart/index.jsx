@@ -1,22 +1,41 @@
-import { SectionCart } from "./style"
+import { DivCarrinho, DivContainer, DivTotal, SectionCart } from "./style"
 
 export const CartPage = ()=>{
     return (
-   <SectionCart>
-<div>
-<h2>
-    Carrinho de compras
-</h2>
-</div>
-<ul>
-    <li>
-      <p>Carinho Vazio</p>
-    </li>
-</ul>
-<div>
-    <p>Total Carrinho</p>
-</div>
+        <DivContainer>
+  <SectionCart>
+     <DivCarrinho>
+       <h2>
+        Carrinho de compras
+       </h2>
+     </DivCarrinho>
+   <ul>
+     <li>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+      <p>item</p>
+     </li>
+   </ul>
+  </SectionCart>
+   <DivTotal>
+   <div>
+   <p>Total</p>
+   <span>40,00</span>
+   </div>
 
-   </SectionCart>
-    )
+   <button>Remover todos</button>
+   
+</DivTotal>
+        </DivContainer>
+ 
+   )
 }
+
+
