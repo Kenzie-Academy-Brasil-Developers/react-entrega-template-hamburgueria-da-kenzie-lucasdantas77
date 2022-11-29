@@ -26,7 +26,7 @@ export const SectionCart = styled.section`
     color: #ffff;
   }
 `;
-export const DivCarrinho = styled.div`
+export const DivCart = styled.div`
   background-color: var(--color-primary);
   padding: 9px 0 0 0;
   width: 99%;

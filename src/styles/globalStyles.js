@@ -18,7 +18,7 @@ button{
     --grey-100: #333333;
     --grey-50: #828282;
     --grey-30: #a0a0a0
-    --grey-20: #b0b0b0;
+    --grey-20: #d0d0b0;
     --grey-0: #f5f5f5;
     --negative: #e60000;
     --warning: #ffcd07;

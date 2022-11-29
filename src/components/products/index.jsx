@@ -1,30 +1,26 @@
-import { useEffect, useState } from "react";
-import { api } from "../../services/api";
 import { CardLi, CardUl, Image } from "./style";
 
-export const List = ({ addProducts }) => {
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    async function renderCards() {
-      try {
-        const res = await api.get("/products");
-        setProducts(res.data);
-      } catch (error) {}
-    }
-    renderCards();
-  }, []);
+export const List = ({ addProducts, products, filterProducts }) => {
+  
 
   return (
     <CardUl>
-      {products.map((lista) => (
-        <CardLi key={lista.id}>
-          <Image src={lista.img} alt="imagem do produto"></Image>
-          <h3>{lista.name}</h3>
-          <p>{lista.category}</p>
-          <span>{`R$ ${lista.price}`}</span>
-          <button onClick={() => addProducts(lista)}>Adicionar</button>
+      {filterProducts.length>0 ?filterProducts.map((list) => (
+        <CardLi key={list.id}>
+          <Image src={list.img} alt="imagem do produto"></Image>
+          <h3>{list.name}</h3>
+          <p>{list.category}</p>
+          <span>{`R$ ${list.price}`}</span>
+          <button onClick={() => addProducts(list)}>Adicionar</button>
         </CardLi>
-      ))}
+      )):products.map((list) => (
+        <CardLi key={list.id}>
+          <Image src={list.img} alt="imagem do produto"></Image>
+          <h3>{list.name}</h3>
+          <p>{list.category}</p>
+          <span>{`R$ ${list.price}`}</span>
+          <button onClick={() => addProducts(list)}>Adicionar</button>
+        </CardLi>))}
     </CardUl>
   );
 };
