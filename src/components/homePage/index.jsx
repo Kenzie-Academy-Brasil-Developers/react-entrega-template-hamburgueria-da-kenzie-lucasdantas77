@@ -11,7 +11,7 @@ export const Home = ({
   currentSale,
 }) => {
   const [filterProducts, setFilterProducts] = useState([]);
-  const [pesquisa, setPesquisa] = useState("");
+  const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
@@ -27,8 +27,8 @@ export const Home = ({
   return (
     <main>
       <HeaderPage
-        pesquisa={pesquisa}
-        setPesquisa={setPesquisa}
+        search={search}
+        setSearch={setSearch}
         setFilterProducts={setFilterProducts}
         products={products}
       />

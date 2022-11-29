@@ -1,8 +1,8 @@
 import { Header } from "./style";
 
 export const HeaderPage = ({
-  pesquisa,
-  setPesquisa,
+ search,
+  setSearch,
   products,
   setFilterProducts,
 }) => {
@@ -10,7 +10,7 @@ export const HeaderPage = ({
   function filter(event) {
     event.preventDefault()
     const newFilter = products.filter((product) => {
-      if (product.name.toLowerCase().includes(pesquisa) || product.category.toLowerCase().includes(pesquisa)) {
+      if (product.name.toLowerCase().includes(search) || product.category.toLowerCase().includes(search)) {
         return true;
       }
     });
@@ -25,10 +25,10 @@ export const HeaderPage = ({
 
       <form>
         <input
-          value={pesquisa}
+          value={search}
           type="text"
           placeholder="Digitar Pesquisa"
-          onChange={(event) => setPesquisa(event.target.value)}
+          onChange={(event) => setSearch(event.target.value)}
         />
         <button onClick={filter}>Pesquisar</button>
       </form>
