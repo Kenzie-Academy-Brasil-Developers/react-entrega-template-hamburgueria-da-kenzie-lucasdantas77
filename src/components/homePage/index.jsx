@@ -13,6 +13,7 @@ export const Home = ({
   const [filterProducts, setFilterProducts] = useState([]);
   const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
+  
 
   useEffect(() => {
     async function renderCards() {
@@ -34,7 +35,7 @@ export const Home = ({
       />
       <DivContainer>
         <List addProducts={addProducts} filterProducts={filterProducts} products={products} />
-        <CartPage currentSale={currentSale} removeProducts={removeProducts} />
+        <CartPage currentSale={currentSale} removeProducts={removeProducts}/>
       </DivContainer>
     </main>
   );

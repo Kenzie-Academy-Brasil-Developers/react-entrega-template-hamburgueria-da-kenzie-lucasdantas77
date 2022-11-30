@@ -5,21 +5,21 @@ export const List = ({ addProducts, products, filterProducts }) => {
 
   return (
     <CardUl>
-      {filterProducts.length>0 ?filterProducts.map((list) => (
-        <CardLi key={list.id}>
-          <Image src={list.img} alt="imagem do produto"></Image>
-          <h3>{list.name}</h3>
-          <p>{list.category}</p>
-          <span>{`R$ ${list.price}`}</span>
-          <button onClick={() => addProducts(list)}>Adicionar</button>
+      {filterProducts.length>0 ?filterProducts.map((product) => (
+        <CardLi key={product.id}>
+          <Image src={product.img} alt="imagem do produto"></Image>
+          <h3>{product.name}</h3>
+          <p>{product.category}</p>
+          <span>{`R$ ${product.price}`}</span>
+          <button onClick={() => addProducts(product)}>Adicionar</button>
         </CardLi>
-      )):products.map((list) => (
-        <CardLi key={list.id}>
-          <Image src={list.img} alt="imagem do produto"></Image>
-          <h3>{list.name}</h3>
-          <p>{list.category}</p>
-          <span>{`R$ ${list.price}`}</span>
-          <button onClick={() => addProducts(list)}>Adicionar</button>
+      )):products.map((product) => (
+        <CardLi key={product.id}>
+          <Image src={product.img} alt="imagem do produto"></Image>
+          <h3>{product.name}</h3>
+          <p>{product.category}</p>
+          <span>{`R$ ${product.price}`}</span>
+          <button onClick={() => addProducts(product)}>Adicionar</button>
         </CardLi>))}
     </CardUl>
   );

@@ -7,7 +7,12 @@ import {
   UlCart,
 } from "./style";
 
-export const CartPage = ({ currentSale, removeProducts }) => {
+export const CartPage = ({ currentSale, removeProducts}) => {
+  const total = currentSale.reduce((previousValue, product)=>{
+    return previousValue + product.price
+
+  },0).toLocaleString("pt-BR", {style: "currency", currency:"BRL"})
+  
   return (
     <DivContainer>
       <SectionCart>
@@ -16,14 +21,14 @@ export const CartPage = ({ currentSale, removeProducts }) => {
         </DivCart>
 
         <UlCart>
-          {currentSale.map((list) => (
-            <li key={list.id}>
-              <img src={list.img} alt="imagem do produto"></img>
+          {currentSale.map((product) => (
+            <li key={product.id}>
+              <img src={product.img} alt="imagem do produto"></img>
               <DivDesc>
-                <h3>{list.name}</h3>
-                <p>{list.category}</p>
+                <h3>{product.name}</h3>
+                <p>{product.category}</p>
               </DivDesc>
-              <span onClick={() => removeProducts(list.id)}>Remover</span>
+              <span onClick={() => removeProducts(product.id)}>Remover</span>
             </li>
           ))}
         </UlCart>
@@ -31,7 +36,7 @@ export const CartPage = ({ currentSale, removeProducts }) => {
       <DivTotal>
         <div>
           <p>Total</p>
-          <span>40,00</span>
+          <span>{total}</span>
         </div>
 
         <button>Remover todos</button>

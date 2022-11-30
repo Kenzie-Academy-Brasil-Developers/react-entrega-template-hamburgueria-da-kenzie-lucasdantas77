@@ -6,11 +6,10 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   const [currentSale, setCurrentSale] = useState([]);
-  const [cartTotal, setCartTotal] = useState(0);
 
-  function addProducts(list) {
-    if (!currentSale.some((product) => product.id === list.id)) {
-      setCurrentSale([...currentSale, list]);
+  function addProducts(product) {
+    if (!currentSale.some((item) => item.id === product.id)) {
+      setCurrentSale([...currentSale, product]);
       toast.success("Item adicionado");
     } else {
       toast.error("Esse item já foi adicionado");

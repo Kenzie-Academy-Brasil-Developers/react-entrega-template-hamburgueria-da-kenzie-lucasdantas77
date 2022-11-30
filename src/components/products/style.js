@@ -24,7 +24,7 @@ export const CardLi = styled.li`
   flex-direction: column;
   background-color: #fff;
   box-sizing: border-box;
-  border: 2px solid var(--grey-20);
+  border: 2px solid #e0e0e0;
   border-radius: 5px;
   width: 90%;
   max-width: 270px;
@@ -33,7 +33,7 @@ export const CardLi = styled.li`
   margin-bottom: 1rem;
 
   @media (min-width: 768px) {
-    heigth: 10px;
+  
   }
 
   h3 {

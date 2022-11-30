@@ -12,8 +12,8 @@ export const SectionCart = styled.section`
   max-width: 300px;
   height: 180px;
   justify-content: space-between;
-  border: 2px solid var(--grey-20);
-  background-color: var(--grey-20);
+  border: 2px solid var(--grey-0);
+  background-color: var(--grey-0);
   margin: 2rem 0 0 2rem;
 
   @media (min-width: 768px) {
@@ -36,7 +36,7 @@ export const DivCart = styled.div`
 `;
 
 export const DivTotal = styled.div`
-  background-color: var(--grey-20);
+  background-color: var(--grey-0);
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
@@ -62,8 +62,9 @@ export const DivTotal = styled.div`
   button {
     width: 100%;
     max-width: 500px;
-    background-color: var(--grey-20);
-    border: 1px solid var(--grey-50);
+    background-color: #e0e0e0;
+    border: 1px solid #e0e0e0;
+    color: var(--grey-50);
     border-radius: 8px;
     padding: 10px;
   }
@@ -78,7 +79,7 @@ export const UlCart = styled.ul`
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  background-color: var(--grey-20);
+  background-color: var(--grey-0);
 
   ::-webkit-scrollbar {
     width: 5px;
@@ -100,13 +101,13 @@ export const UlCart = styled.ul`
     height: 70px;
     padding: 5px;
     margin-right: 120px;
-    background-color: var(--grey-20);
+    background-color: var(--grey-0);
   }
 
   img {
     width: 100px;
     height: 80px;
-    background-color: var(--grey-50);
+    background-color: #e0e0e0;
     border-radius: 8px;
     object-fit: cover;
   }
