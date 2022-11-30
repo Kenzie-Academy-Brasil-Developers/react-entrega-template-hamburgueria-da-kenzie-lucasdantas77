@@ -16,6 +16,7 @@ export const HeaderPage = ({
     });
     setFilterProducts(newFilter);
   }
+  
   return (
     <Header>
       <h1>
