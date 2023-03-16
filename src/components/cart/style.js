@@ -128,3 +128,19 @@ export const DivDesc = styled.div`
     font-size: 12px;
   }
 `;
+
+
+export const DivItens = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 20px;
+  h3 {
+    font-size: 20px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+`;
+

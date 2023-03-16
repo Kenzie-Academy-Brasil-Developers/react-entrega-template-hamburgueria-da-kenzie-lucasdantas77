@@ -9,6 +9,7 @@ export const Home = ({
   addProducts,
   removeProducts,
   currentSale,
+  removeAll,
 }) => {
   const [filterProducts, setFilterProducts] = useState([]);
   const [search, setSearch] = useState("");
@@ -35,7 +36,7 @@ export const Home = ({
       />
       <DivContainer>
         <List addProducts={addProducts} filterProducts={filterProducts} products={products} />
-        <CartPage currentSale={currentSale} removeProducts={removeProducts}/>
+        <CartPage  removeAll={removeAll} currentSale={currentSale} removeProducts={removeProducts}/>
       </DivContainer>
     </main>
   );

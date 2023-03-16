@@ -21,6 +21,11 @@ function App() {
     setCurrentSale(newProducts);
   }
 
+  function removeAll(){
+    setCurrentSale([]);
+    toast.info("Sua sacola está vazia")
+  };
+
   return (
     <div className="App">
       <GlobalStyles />
@@ -28,10 +33,11 @@ function App() {
         currentSale={currentSale}
         addProducts={addProducts}
         removeProducts={removeProducts}
+        removeAll={removeAll}
       />
 
       <ToastContainer
-        position="top-right"
+        position="bottom-right"
         autoClose={5000}
         hideProgressBar={false}
         newestOnTop={false}
